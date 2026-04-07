@@ -1,0 +1,69 @@
+.scan-page { display: flex; flex-direction: column; gap: 24px; }
+.scan-page__header { }
+.scan-page__title { font-size: 1.6rem; margin-bottom: 6px; }
+.scan-page__sub { color: var(--text-secondary); font-size: 0.875rem; max-width: 560px; }
+
+.scan-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 900px) { .scan-layout { grid-template-columns: 1fr; } }
+
+.scan-left { display: flex; flex-direction: column; gap: 14px; }
+
+/* Upload card */
+.scan-upload-card { padding: 22px; }
+.scan-upload-card__header {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 0.9rem;
+  margin-bottom: 18px;
+  color: var(--text-primary);
+}
+.scan-analyze-btn {
+  width: 100%; justify-content: center;
+  margin-top: 16px; padding: 13px;
+}
+
+/* Tip */
+.scan-tip {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 0.78rem; color: var(--text-secondary);
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+}
+
+/* Placeholder */
+.scan-placeholder {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px;
+  text-align: center;
+}
+.scan-placeholder__icon {
+  width: 72px; height: 72px;
+  background: var(--green-50);
+  border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--green-600);
+  margin-bottom: 4px;
+}
+.scan-placeholder h3 { font-size: 1.1rem; color: var(--text-primary); }
+.scan-placeholder p  { font-size: 0.85rem; color: var(--text-secondary); }
+
+.scan-steps { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; text-align: left; width: 100%; max-width: 280px; }
+.scan-step { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; color: var(--text-secondary); }
+.scan-step__num {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--green-50); border: 1px solid var(--green-100);
+  color: var(--green-700); font-size: 0.72rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}

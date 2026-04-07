@@ -1,0 +1,182 @@
+.settings {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings__header {
+  margin-bottom: 2.5rem;
+}
+
+.settings__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.settings__subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.settings-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.settings-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.settings-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.settings-row:not(:last-child) {
+  border-bottom: 1px dashed var(--border);
+}
+
+.settings-row__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-row__label {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.settings-row__desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* Premium Switch UI */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--border-light);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 24px;
+  border: 1.5px solid transparent;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 2.5px;
+  background-color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switch input:focus-visible + .slider {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+input:checked + .slider {
+  background: var(--green-600);
+  background: linear-gradient(to right, var(--green-600), var(--green-500));
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider:hover {
+  filter: brightness(0.95);
+}
+
+input:checked + .slider:hover {
+  filter: brightness(1.05);
+}
+
+/* Micro-interaction: Thumb expands slightly on click */
+.switch:active .slider:before {
+  width: 20px;
+}
+input:checked:active + .slider:before {
+  width: 20px;
+  transform: translateX(17px);
+}
+
+/* Network Status Section */
+.network-status {
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: var(--background);
+    margin-top: 1rem;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-badge--online {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.status-badge--offline {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.status-badge__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-badge__dot--online { background: #16a34a; }
+.status-badge__dot--offline { background: #dc2626; }
