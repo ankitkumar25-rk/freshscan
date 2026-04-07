@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://placehold.co/120x120/16a34a/ffffff?text=FreshScan+Logo&font=outfit" alt="FreshScan Logo" width="120" />
+  <img src="./client/src/assets/logo2.jpeg" alt="FreshScan Logo" width="120" />
   <h1>FreshScan</h1>
   <p><strong>AI-Powered Crop Vitality & Freshness Tracker</strong></p>
 
